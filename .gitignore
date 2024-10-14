@@ -7,3 +7,4 @@ app/schema/__pycache__/
 *.pyc
 .env
 env/
+venv/
