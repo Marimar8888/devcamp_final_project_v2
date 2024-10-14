@@ -21,7 +21,7 @@ Este es el backend de un proyecto de tienda online de cursos, desarrollado en Py
 ## Características
 
 - **Gestión de Cursos**: Permite a los usuarios gestionar la creación, actualización y eliminación de cursos a través de la API.
-- **Autenticación y Autorización**: Implementa un sistema seguro para el registro, inicio de sesión y recuperación de contraseñas para los usuarios.
+- **Autenticación y Autorización**: Implementa un sistema seguro para el registro, inicio de sesión y recuperación de contraseñas a través de token y email.
 - **Endpoints para Dashboard de Estudiante**: Proporciona acceso a información sobre cursos adquiridos y progreso de aprendizaje a través de la API.
 - **Endpoints para Dashboard de Profesor**: Facilita la gestión de cursos, permitiendo a los profesores interactuar con la base de datos de manera eficiente.
 - **Administración del Centro de Estudios**: Permite a los administradores gestionar profesores, cursos y estudiantes mediante un conjunto de endpoints específicos.
@@ -116,7 +116,6 @@ Aquí tienes la descripción de las secciones con los encabezados ajustados seg�
 ### Descripción de las Secciones
 
 #### 1. Archivos Raíz
-- **`.env`**: Almacena variables de entorno y configuraciones sensibles (como credenciales de base de datos) que no deben ser compartidas en el control de versiones.
 - **`.gitignore`**: Especifica archivos o directorios que Git debe ignorar, ayudando a mantener el repositorio limpio.
 - **`main.py`**: Archivo principal de la aplicación, donde se inicializa y ejecuta la app Flask.
 - **`Pipfile` y `Pipfile.lock`**: Archivos de configuración para el gestor de paquetes `pipenv`, que aseguran que las dependencias estén bien gestionadas y versionadas.
@@ -249,7 +248,7 @@ Este proyecto se puede desplegar en la plataforma **Render** para el frontend y 
    - Asegúrate de definir todas las variables de entorno necesarias para tu aplicación, incluyendo detalles de la conexión a la base de datos.
 
 
-### Configuración de la Base de Datos en Nominalia
+### Configuración de la Base de Datos en un hosting
 
 1. **Contratar un servicio de base de datos**:
    - Regístrate en [Nominalia](https://www.nominalia.com) y selecciona un plan que se ajuste a tus necesidades.

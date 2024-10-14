@@ -144,27 +144,33 @@ def delete_user(id):
 @bp.route('/login', methods=["POST"])
 def login():
     data = request.json
+    logger.info("Login attempt with data: %s", data)
 
     required_fields = ['users_email', 'users_password']
     for field in required_fields:
         if field not in data or not data[field]:
+            logger.warning("Missing required field: %s", field)
             return jsonify({'error': f'Field {field} is required'}), 400
 
     users_email = data['users_email']
     users_password = data['users_password']
+    logger.info("Searching for user with email: %s", users_email)
 
     user = User.query.filter_by(users_email=users_email).first()
 
     if user is None:
+        logger.warning("User not found: %s", users_email)
         return jsonify({'error': 'User not found'}), 404
 
     if not bcrypt.checkpw(users_password.encode('utf-8'), user.users_password.encode('utf-8')):
+        logger.warning("Incorrect password for user: %s", users_email)
         return jsonify({'error': 'Incorrect password'}), 401
     
     token = encode_token(user.users_id)
+    logger.info("Login successful for user: %s", users_email)
+
     user_name = user.users_name
     
-
     return jsonify({'message': 'Login successful', 'token':token, 'user_name':user_name}), 200
 
 @bp.route('/get_user_id', methods=["GET"])

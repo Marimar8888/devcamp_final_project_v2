@@ -4,7 +4,6 @@
 ```plaintext
 
 C:.
-│   .env
 │   .gitignore
 │   main.py
 │   package-lock.json
