@@ -18,8 +18,6 @@ Este es el backend de un proyecto de tienda online de cursos, desarrollado en Py
   - [Licencia](#licencia)
   - [Créditos](#créditos)
 
-Claro, aquí tienes el contenido en formato markdown, integrando la **Explicación de los Cambios** en la sección de **Tecnologías Aplicadas** y añadiendo la **Configuración de la Base de Datos** en la sección de **Requisitos**. He mantenido un enfoque claro y conciso, centrado en lo que podría necesitar un usuario externo.
-
 ## Características
 
 - **Gestión de Cursos**: Permite a los usuarios gestionar la creación, actualización y eliminación de cursos a través de la API.
