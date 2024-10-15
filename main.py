@@ -1,7 +1,7 @@
 from app import create_app
 import requests
 
-app = create_app()
+app, logger = create_app()
 
 @app.route('/') # Creo la ruta de acceso a nuestra aplicación con el decorador
 def hello():
