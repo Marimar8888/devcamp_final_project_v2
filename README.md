@@ -2,7 +2,7 @@
 
 ## Introducción
 
-Este es el backend de un proyecto de tienda online de cursos, desarrollado en Python utilizando **Flask** como framework principal. La API permite gestionar la lógica de negocio y las interacciones con la base de datos, facilitando el manejo de datos para estudiantes, profesores y centros de estudio. Está diseñada para soportar un dashboard dedicado en el frontend, proporcionando endpoints para el registro de usuarios, autenticación, gestión de cursos, facturas y más. Esta arquitectura permite una separación clara entre la lógica del servidor y la presentación, asegurando un desarrollo modular y escalable.
+Se trata de una API RESTful de un proyecto de tienda online de cursos, desarrollado en Python utilizando **Flask** como framework principal. La API permite gestionar la lógica de negocio y las interacciones con la base de datos, facilitando el manejo de datos para estudiantes, profesores y centros de estudio. Está diseñada para soportar un dashboard dedicado en el frontend, proporcionando endpoints para el registro de usuarios, autenticación, gestión de cursos, profesores, centros de estudios y más. Esta arquitectura permite una separación clara entre la lógica del servidor y la presentación, asegurando un desarrollo modular y escalable.
 
 ## Tabla de Contenidos
 
@@ -21,10 +21,10 @@ Este es el backend de un proyecto de tienda online de cursos, desarrollado en Py
 ## Características
 
 - **Gestión de Cursos**: Permite a los usuarios gestionar la creación, actualización y eliminación de cursos a través de la API.
-- **Autenticación y Autorización**: Implementa un sistema seguro para el registro, inicio de sesión y recuperación de contraseñas a través de token y email.
+- **Autenticación y Autorización**: Implementa un sistema seguro para el registro, inicio de sesión y recuperación de contraseñas a través de enmail y token.
 - **Endpoints para Dashboard de Estudiante**: Proporciona acceso a información sobre cursos adquiridos y progreso de aprendizaje a través de la API.
 - **Endpoints para Dashboard de Profesor**: Facilita la gestión de cursos, permitiendo a los profesores interactuar con la base de datos de manera eficiente.
-- **Administración del Centro de Estudios**: Permite a los administradores gestionar profesores, cursos y estudiantes mediante un conjunto de endpoints específicos.
+- **Administración del Centro de Estudios**: Permite a los administradores gestionar profesores, cursos y centros mediante un conjunto de endpoints específicos.
 - **API RESTful en Python**: La lógica del negocio y la gestión de datos se manejan a través de una API RESTful, garantizando una comunicación clara y estructurada entre el frontend y el backend.
 
 ## Tecnologías Utilizadas
@@ -111,8 +111,6 @@ Para instalar y configurar el proyecto, sigue estos pasos:
 
 La estructura utilizada para esta la API realizada en Python, para servir a una aplicación web utilizando Flask como framework, permite una fácil escalabilidad, mantenibilidad y comprensión del código. A continuación, se describen las diferentes secciones y sus propósitos.
 
-Aquí tienes la descripción de las secciones con los encabezados ajustados según tu solicitud:
-
 ### Descripción de las Secciones
 
 #### 1. Archivos Raíz
@@ -164,8 +162,6 @@ Contiene funciones utilitarias que pueden ser reutilizadas en diferentes partes 
 - **Control de Versiones**: Utilizar `.gitignore` adecuadamente para evitar que archivos innecesarios o sensibles se incluyan en el control de versiones.
 
 - **Consistencia en Nombres**: Utilizar convenciones de nombres consistentes para archivos y carpetas para mejorar la legibilidad.
-
-Esta estructura donde se aplica las mejores prácticas en desarrollo de software que se pueden implementar en un proyecto de Flask, resultando en una aplicación más robusta, fácil de mantener y escalar.
 
 ### Estructura de Archivos
 
@@ -248,20 +244,16 @@ Este proyecto se puede desplegar en la plataforma **Render** para el frontend y 
    - Asegúrate de definir todas las variables de entorno necesarias para tu aplicación, incluyendo detalles de la conexión a la base de datos.
 
 
-### Configuración de la Base de Datos en un hosting
+### Configuración de la Base de Datos en Hostalia
 
 1. **Contratar un servicio de base de datos**:
-   - Regístrate en [Nominalia](https://www.nominalia.com) y selecciona un plan que se ajuste a tus necesidades.
-
+   - Regístrate en [Hostalia](https://www.hostalia.com) y selecciona un plan que se ajuste a tus necesidades.
+  
 2. **Crear la base de datos**:
-   - Sigue las instrucciones de Nominalia para crear tu base de datos y anota los detalles de conexión (nombre, usuario, contraseña, URL).
+   - Sigue las instrucciones de Hostalia para crear tu base de datos y anotar los detalles de conexión (nombre, usuario, contraseña, URL).
 
 3. **Configurar la conexión en el Backend**:
-   - En el backend, define las variables de entorno necesarias para conectarte a la base de datos utilizando los detalles obtenidos de Nominalia. Asegúrate de incluir:
-     - `DB_HOST`: Dirección del servidor de la base de datos
-     - `DB_USER`: Nombre de usuario de la base de datos
-     - `DB_PASS`: Contraseña de la base de datos
-     - `DB_NAME`: Nombre de la base de datos
+   - En el backend, define las variables de entorno necesarias para conectarte a la base de datos, utilizando los detalles obtenidos de Hostalia.
 
 ### Notas Adicionales
 
