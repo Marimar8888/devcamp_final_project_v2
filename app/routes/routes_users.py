@@ -1,4 +1,5 @@
-from app import db, logger  
+from app import db
+from app.utils.logger import logger 
 import bcrypt
 from flask import Blueprint, request, jsonify
 from app.models import User, UserRol, Rol
